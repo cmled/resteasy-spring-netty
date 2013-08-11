@@ -7,6 +7,7 @@ import org.greg.resteasy.controller.DemoControllerTest.TestConfig;
 import org.greg.resteasy.server.NettyServer;
 import org.greg.resteasy.vo.DemoMessage;
 import org.greg.resteasy.vo.DemoName;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +20,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
+/*
+ * TODO This is an integration test
+ */
 @ContextConfiguration(classes = TestConfig.class)
 @RunWith(SpringJUnit4ClassRunner.class)
 public class DemoControllerTest {
@@ -51,8 +55,14 @@ public class DemoControllerTest {
 	public void init() {
 		server.start();
 	}
+	
+	@After
+	public void shutdown() throws InterruptedException{
+		Thread.sleep(5000);//allow controller to finish before cleanup
+		server.cleanUp();
+	}
 
-//	@Test
+	@Test
 	public void testHelloworld() {
 		DemoMessage resp = restOps.getForObject(buildUrl("hello/world"), DemoMessage.class);
 		assertNotNull(resp);
