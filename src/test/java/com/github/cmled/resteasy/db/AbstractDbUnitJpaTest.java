@@ -1,4 +1,4 @@
-package org.greg.resteasy.db;
+package com.github.cmled.resteasy.db;
 
 import java.io.InputStream;
 import java.sql.SQLException;

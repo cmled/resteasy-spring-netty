@@ -1,5 +1,5 @@
 
-package org.greg.resteasy.model;
+package com.github.cmled.resteasy.model;
 
 import java.io.Serializable;
 

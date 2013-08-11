@@ -1,9 +1,10 @@
-package org.greg.resteasy.server;
+package com.github.cmled.resteasy.server;
 
-import org.greg.resteasy.controller.DemoController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.util.Assert;
+
+import com.github.cmled.resteasy.controller.DemoController;
 
 public class Main {
 

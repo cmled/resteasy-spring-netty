@@ -1,11 +1,12 @@
-package org.greg.resteasy.db;
+package com.github.cmled.resteasy.db;
 
 
 import java.util.List;
 
-import org.greg.resteasy.model.User;
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.github.cmled.resteasy.model.User;
 
 
 /**

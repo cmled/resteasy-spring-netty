@@ -1,4 +1,4 @@
-package org.greg.resteasy.vo;
+package com.github.cmled.resteasy.vo;
 
 public class DemoName {
 

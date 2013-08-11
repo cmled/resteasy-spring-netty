@@ -3,7 +3,7 @@
     <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
 
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>org.greg.resteasy.model.User</class>
+		<class>com.github.cmled.resteasy.model.User</class>
 
 		<properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />

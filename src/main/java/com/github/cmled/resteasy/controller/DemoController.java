@@ -1,4 +1,4 @@
-package org.greg.resteasy.controller;
+package com.github.cmled.resteasy.controller;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -9,9 +9,10 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
 
-import org.greg.resteasy.vo.DemoMessage;
-import org.greg.resteasy.vo.DemoName;
 import org.springframework.stereotype.Controller;
+
+import com.github.cmled.resteasy.vo.DemoMessage;
+import com.github.cmled.resteasy.vo.DemoName;
 
 @Controller
 @Path("/hello")

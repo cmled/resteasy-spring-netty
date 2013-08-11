@@ -1,4 +1,4 @@
-package org.greg.resteasy.server;
+package com.github.cmled.resteasy.server;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;

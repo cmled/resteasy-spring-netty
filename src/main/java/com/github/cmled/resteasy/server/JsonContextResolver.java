@@ -1,4 +1,4 @@
-package org.greg.resteasy.server;
+package com.github.cmled.resteasy.server;
 
 import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;

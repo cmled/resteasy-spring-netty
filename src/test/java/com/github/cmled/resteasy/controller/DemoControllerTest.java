@@ -1,12 +1,8 @@
-package org.greg.resteasy.controller;
+package com.github.cmled.resteasy.controller;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import org.greg.resteasy.controller.DemoControllerTest.TestConfig;
-import org.greg.resteasy.server.NettyServer;
-import org.greg.resteasy.vo.DemoMessage;
-import org.greg.resteasy.vo.DemoName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,6 +15,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
+
+import com.github.cmled.resteasy.controller.DemoController;
+import com.github.cmled.resteasy.controller.DemoControllerTest.TestConfig;
+import com.github.cmled.resteasy.server.NettyServer;
+import com.github.cmled.resteasy.vo.DemoMessage;
+import com.github.cmled.resteasy.vo.DemoName;
 
 /*
  * TODO This is an integration test
