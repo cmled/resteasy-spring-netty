@@ -1,14 +1,14 @@
-package org.greg.resteasy.pojo.response;
+package org.greg.resteasy.vo;
 
-public class Helloworld {
+public class DemoMessage {
 
 	String	message;
 	
-	public Helloworld() {
+	public DemoMessage() {
 		
 	}
 	
-	public Helloworld(String message) {
+	public DemoMessage(String message) {
 		this.message = message;
 	}
 

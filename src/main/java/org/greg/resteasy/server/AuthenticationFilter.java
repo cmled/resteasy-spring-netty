@@ -1,4 +1,4 @@
-package org.greg.resteasy.request;
+package org.greg.resteasy.server;
 
 import java.io.IOException;
 import java.security.Principal;

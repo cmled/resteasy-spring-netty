@@ -12,42 +12,34 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
 
-import org.greg.resteasy.controller.request.Article;
-import org.greg.resteasy.pojo.response.Helloworld;
+import org.greg.resteasy.vo.DemoMessage;
+import org.greg.resteasy.vo.DemoName;
 import org.springframework.stereotype.Controller;
 
 @Controller
 @Path("/hello")
-public class HomeController {
+public class DemoController {
 
 	@GET
 	@Path("/world")
 	@Produces("application/json")
-	public Helloworld helloworld() throws Exception {
-		return new Helloworld("Welcome, HelloWorld");
+	public DemoMessage helloworld() throws Exception {
+		return new DemoMessage("Welcome, HelloWorld");
 	}
 
 	@GET
 	@Path("/auth")
 	@Produces("application/json")
-	public Helloworld auth(@Context SecurityContext context) {
-		return new Helloworld(context.getUserPrincipal().getName());
+	public DemoMessage auth(@Context SecurityContext context) {
+		return new DemoMessage(context.getUserPrincipal().getName());
 	}
 
 	@POST
 	@Consumes({ MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.APPLICATION_JSON })
-	public Article save(Article article) {
+	public DemoName save(DemoName article) {
 		return article;
 	}
 
-	@POST
-	@Consumes({ MediaType.APPLICATION_JSON })
-	@Produces({ MediaType.APPLICATION_JSON })
-	public List<Article> save(
-			@QueryParam("multi") boolean isMulti,
-			List<Article> articles) {
-		return articles;
-	}
 
 }

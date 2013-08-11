@@ -1,7 +1,6 @@
-package org.greg.resteasy;
+package org.greg.resteasy.server;
 
-import org.greg.resteasy.controller.HomeController;
-import org.greg.resteasy.server.NettyServer;
+import org.greg.resteasy.controller.DemoController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.util.Assert;
@@ -13,7 +12,7 @@ public class Main {
 
 		ApplicationContext ac = new ClassPathXmlApplicationContext("root-context.xml");
 		Assert.notNull(ac);
-		Assert.notNull(ac.getBean(HomeController.class));
+		Assert.notNull(ac.getBean(DemoController.class));
 
 		NettyServer netty = ac.getBean(NettyServer.class);
 

@@ -1,15 +1,15 @@
-package org.greg.resteasy.controller.request;
+package org.greg.resteasy.vo;
 
-public class Article {
+public class DemoName {
 
 	String	name;
 	Integer	id;
 
-	public Article() {
+	public DemoName() {
 
 	}
 
-	public Article(int id, String name) {
+	public DemoName(int id, String name) {
 		this.name = name;
 		this.id = id;
 	}
