@@ -34,13 +34,6 @@ public class DemoController {
 		return new DemoMessage("Welcome, HelloWorld");
 	}
 
-	@GET
-	@Path("/auth")
-	@Produces("application/json")
-	public DemoMessage auth(@Context SecurityContext context) {
-		return new DemoMessage(context.getUserPrincipal().getName());
-	}
-
 	@POST
 	@Consumes({ MediaType.APPLICATION_JSON })
 	@Produces({ MediaType.APPLICATION_JSON })
