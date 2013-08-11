@@ -1,9 +1,14 @@
 package com.github.cmled.resteasy.controller;
 
+import java.io.File;
+import java.net.URISyntaxException;
+import java.net.URL;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -39,5 +44,10 @@ public class DemoController {
 		return article;
 	}
 
-
+	@GET
+	@Path("/public/foundation/{fileName}")
+	public File getImage(@PathParam("fileName") String fileName) throws URISyntaxException {
+		URL url = this.getClass().getResource("/public/foundation/" + fileName);
+		return new File(url.toURI());
+	}
 }
